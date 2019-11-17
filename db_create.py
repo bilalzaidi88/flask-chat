@@ -8,7 +8,7 @@ db.create_all()
 if not os.path.exists(SQLALCHEMY_MIGRATE_REPO):
     api.create(SQLALCHEMY_MIGRATE_REPO, 'database repository')
     api.version_control(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO)
-    u = models.User(username='admin', password='admin', is_admin=True)
+    u = models.User(username='bilal', password='admin', is_admin=True)
     u.set_password('admin')
     db.session.add(u)
     db.session.commit()
